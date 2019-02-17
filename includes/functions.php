@@ -14,3 +14,11 @@ function quizbook_filter_questions($key){
 function d($el){
   echo "<pre>"; print_r($el); echo "</pre>";
 }
+
+/**
+ * Auxiliar para agregar columas personalizadas en el orden deseado
+ */
+function array_insert( $array, $index, $insert ) {
+  return array_slice( $array, 0, $index, true ) + $insert +
+  array_slice( $array, $index, count( $array ) - $index, true);
+}

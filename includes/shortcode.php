@@ -32,7 +32,7 @@ function quizbook_shortcode( $atts ) {
             if(quizbook_filter_questions($k) === 0){
               $numero = end(explode("_", $k));
               ?>
-              <div id="<?php echo get_the_ID() . ":" . $numero; ?>">
+              <div id="<?php echo get_the_ID() . ":" . $numero; ?>" class="respuesta">
                 <?php echo $v[0]; ?>
               </div>
               <?php
@@ -43,6 +43,8 @@ function quizbook_shortcode( $atts ) {
         <?php endwhile; wp_reset_postdata(); ?>
       </ul>
     </div>
+    <div id="quizbook_resultado"></div>
+    <input type="submit" value="Enviar" id="quizbook_btn_submit">
   </form>
   <?php
   $html = ob_get_contents();

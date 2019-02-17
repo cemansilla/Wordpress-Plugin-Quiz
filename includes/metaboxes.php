@@ -69,11 +69,11 @@ function quizbook_metaboxes($post){
         <?php $respuesta = esc_html(get_post_meta($post->ID, 'quizbook_correcta', true)); ?>
         <select name="quizbook_correcta" id="respuesta_correcta" class="postbox">
           <option value="">Elige la respuesta correcta</option>
-          <option <?php selected($respuesta, 'qb_correcta:a'); ?> value="qb_correcta:a">a</option>
-          <option <?php selected($respuesta, 'qb_correcta:b'); ?> value="qb_correcta:b">b</option>
-          <option <?php selected($respuesta, 'qb_correcta:c'); ?> value="qb_correcta:c">c</option>
-          <option <?php selected($respuesta, 'qb_correcta:d'); ?> value="qb_correcta:d">d</option>
-          <option <?php selected($respuesta, 'qb_correcta:e'); ?> value="qb_correcta:e">e</option>
+          <option <?php selected($respuesta, 'qb_correcta:1'); ?> value="qb_correcta:1">a</option>
+          <option <?php selected($respuesta, 'qb_correcta:2'); ?> value="qb_correcta:2">b</option>
+          <option <?php selected($respuesta, 'qb_correcta:3'); ?> value="qb_correcta:3">c</option>
+          <option <?php selected($respuesta, 'qb_correcta:4'); ?> value="qb_correcta:4">d</option>
+          <option <?php selected($respuesta, 'qb_correcta:5'); ?> value="qb_correcta:5">e</option>
         </select>
       </td>
     </tr>

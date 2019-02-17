@@ -1,4 +1,6 @@
 <?php
+if(!defined('ABSPATH')) exit;
+
 /*
 Plugin Name:  Quiz Book
 Plugin URI:
@@ -48,3 +50,13 @@ register_deactivation_hook( __FILE__, 'quizbook_remove_capabilities' );
  * Agrego shortcode
  */
 require_once(plugin_dir_path(__FILE__) . "includes/shortcode.php");
+
+/**
+ * Agrego css y js
+ */
+require_once(plugin_dir_path(__FILE__) . "includes/scripts.php");
+
+/**
+ * Resultados del cuestionario
+ */
+require_once(plugin_dir_path(__FILE__) . "includes/resultados.php");
